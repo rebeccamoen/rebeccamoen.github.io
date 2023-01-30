@@ -23,7 +23,7 @@
           Bots.connect()                               // Connect to server
               .then(() => {
                   console.log("Connection Successful");
-                  Bots.sendMessage("Hei, jeg trenger hjelp"); // send "hello" message when the chatbot is opened
+                  Bots.sendMessage("Hei"); // send "hello" message when the chatbot is opened
                   Bots.onMessage((message) => {
                       if(!message.text.trim()){
                         Bots.sendMessage("hello");
