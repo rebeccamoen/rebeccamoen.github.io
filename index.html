@@ -61,3 +61,45 @@
   
  </script>
  <script src="web-sdk.js" onload="initSdk('Bots')"></script>
+
+ <!----ChatBot Script---->  
+ <script>
+  var chatWidgetSettings = {
+      URI: 'oda-a2e17519694d4b50899ee4ad4044b28b-da4.data.digitalassistant.oci.oraclecloud.com',
+      channelId: 'ac2a13e5-f6cf-4d47-8e5b-46032740ea18',
+      botButtonIcon: 'style/lofavor.png',
+      logoIcon: 'style/lofavor.png',
+      botIcon: 'style/lofavor.png',	  
+    i18n: {
+	    en: {
+		    chatTitle: 'Oda Chatbot'
+	    }
+    },
+    initUserHiddenMessage: 'Hello',
+    enableAttachment: false,
+    showConnectionStatus: true,
+    enableClearMessage: true,
+  };    
+  function initSdk(name) {
+      // Default name is Bots
+      if (!name) {
+          name = 'Bots';
+      }
+      setTimeout(() => {
+          const Bots = new WebSDK(chatWidgetSettings); // Initiate library with configuration
+          Bots.connect()                               // Connect to server
+              .then(() => {
+                  console.log("Connection Successful");
+                  
+              })
+              .catch((reason) => {
+                  console.log("Connection failed");
+                  console.log(reason);
+              });
+	  Bots.setMessagePadding('55px');;   
+          window[name] = Bots;
+      });
+  }
+  
+  </script>
+  <script src="web-sdk.js" onload="initSdk('Bots')"></script>
