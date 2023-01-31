@@ -6,8 +6,8 @@
 </body>
 </html>
 
- <!----ChatBot Script---->  
- <script>
+<!----ChatBot Script---->  
+<script>
   var chatWidgetSettings = {
     URI: 'oda-a2e17519694d4b50899ee4ad4044b28b-da4.data.digitalassistant.oci.oraclecloud.com',
     channelId: 'ac2a13e5-f6cf-4d47-8e5b-46032740ea18',
@@ -19,19 +19,16 @@
     enableAttachment: false,
     showConnectionStatus: true,
     enableClearMessage: true,
-    hour12: false
   };    
+ 
   function initSdk(name) {
       // Default name is Bots
-      if (!name) {
-          name = 'Bots';
-      }
+      if (!name) { name = 'Bots'; }
       setTimeout(() => {
           const Bots = new WebSDK(chatWidgetSettings); // Initiate library with configuration
           Bots.connect()                               // Connect to server
               .then(() => {
                   console.log("Connection Successful");
-                  
               })
               .catch((reason) => {
                   console.log("Connection failed");
@@ -41,5 +38,5 @@
       });
   }
   
-  </script>
-  <script src="web-sdk.js" onload="initSdk('Bots')"></script>
+</script>
+<script src="web-sdk.js" onload="initSdk('Bots')"></script>
