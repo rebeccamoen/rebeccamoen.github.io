@@ -15,7 +15,7 @@
       botButtonIcon: 'style/lofavor.png',
       logoIcon: 'style/lofavor.png',
       botIcon: 'style/lofavor.png',      
-      //i18n: { en: { chatTitle: 'Oda Chatbot' // Tittel på chat header } },
+      i18n: { en: { chatTitle: 'Oda Chatbot' } }, // Tittel på chat header 
       /*
       botButtonIcon: '',
       logoIcon: '',
@@ -39,7 +39,7 @@
       
   };
   
-  function initSdk(name) {
+   function initSdk(name) {
       // Default name is Bots
       if (!name) {
           name = 'Bots';
@@ -49,6 +49,7 @@
           Bots.connect()                               // Connect to server
               .then(() => {
                   console.log("Connection Successful");
+                  
               })
               .catch((reason) => {
                   console.log("Connection failed");
@@ -56,6 +57,7 @@
               });
           window[name] = Bots;
       });
+  }
   
  </script>
  <script src="web-sdk.js" onload="initSdk('Bots')"></script>
