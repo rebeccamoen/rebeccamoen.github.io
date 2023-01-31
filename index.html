@@ -16,13 +16,6 @@ var chatSettings = {
 };
 
 function initSDK(name) {
-    // If WebSDK is not available, reattempt later
-    if (!document || !WebSDK) {
-        setTimeout(function() {
-            initSDK(name);
-        }, 2000);
-        return;
-    }
 // Default name is Bots
 if (!name) {
     name = 'Bots';
