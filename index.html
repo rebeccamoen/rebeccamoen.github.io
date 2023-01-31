@@ -34,6 +34,15 @@
       showConnectionStatus: true,
       enableClearMessage: true,
       hour12: false,
+    
+      const date = Date.UTC(2012, 11, 17, 4, 0, 42);
+      console.log(new Intl.DateTimeFormat('fr', {
+        hour: 'numeric',
+        hourCycle: 'h12',
+        dayPeriod: 'short',
+        timeZone: 'UTC',
+      }).format(date));
+    }
       
   };
   
@@ -54,15 +63,6 @@
               });
           window[name] = Bots;
       });
-    const date = Date.UTC(2012, 11, 17, 4, 0, 42);
-
-    console.log(new Intl.DateTimeFormat('fr', {
-      hour: 'numeric',
-      hourCycle: 'h12',
-      dayPeriod: 'short',
-      timeZone: 'UTC',
-    }).format(date));
-  }
   
  </script>
  <script src="web-sdk.js" onload="initSdk('Bots')"></script>
