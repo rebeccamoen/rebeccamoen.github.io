@@ -1726,7 +1726,7 @@ e = self, factory = function () {return function () {'use strict';var e = {216: 
               return (t = t.replace(f, (function (t) {return I[t](e, n)}))).replace(/@@@/g, (function () {return i.shift()}))}
           window.setInterval, window.setTimeout;const L = e => e instanceof Function,M = () => /Android/i.test(navigator.userAgent) || /iPhone|iPad/i.test(navigator.userAgent)
           function P (e, {pattern:t, locale:s}) {let i
-            i = 'string' == typeof e ? new Date(e) : e;const n = `${i.toLocaleDateString(s,{/*weekday:"long",day:"2-digit",month:"2-digit"*/})/*.replace(/,/g,"")*/}, ${i.toLocaleTimeString(s,{hour:"numeric",minute:"numeric",hour12:0})}`
+            i = 'string' == typeof e ? new Date(e) : e;const n = `${i.toLocaleDateString(s,{/*weekday:"long",day:"2-digit",month:"2-digit"*/}).replace(/,/g,"")}, ${i.toLocaleTimeString(s,{hour:"numeric",minute:"numeric",hour12:0})}`
             if ('string' == typeof t)try {return E(i, t)} catch(e) {return n }return 'object' == typeof t && null !== t ? i.toLocaleString(s, t) : n}function D (e, t, s = '#000') {const i = t.height,n = t.width,o = Math.floor(i / 2)
             let a = function (e, t) {const s = Math.ceil(t / 2),i = e.length / s,n = [],o = []
               for (let t = 0;t < e.length;t += i) {const s = e.slice(t, t + i).map((e => e * e)).reduce(((e, t) => e + t), 0) / i
