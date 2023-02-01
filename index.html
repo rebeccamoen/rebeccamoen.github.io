@@ -9,19 +9,19 @@
 <!----ChatBot Script---->  
 <script>
   var chatWidgetSettings = {
-    URI: 'oda-a2e17519694d4b50899ee4ad4044b28b-da4.data.digitalassistant.oci.oraclecloud.com',
-    channelId: 'ac2a13e5-f6cf-4d47-8e5b-46032740ea18',
-    botButtonIcon: 'style/lofavor.png',
-    logoIcon: 'style/lofavor.png',
-    botIcon: 'style/lofavor.png',	  
-    i18n: { en: { chatTitle: 'Oda Chatbot' } },
-    initUserHiddenMessage: 'Hello',
-    disablePastActions: 'none',
-    openLinksInNewWindow: true,
-    enableAttachment: false,
-    showConnectionStatus: true,
-    enableClearMessage: true,
-    hour12: false,
+    URI: 'oda-a2e17519694d4b50899ee4ad4044b28b-da4.data.digitalassistant.oci.oraclecloud.com', // The Host name in ODA instance URL
+    channelId: 'ac2a13e5-f6cf-4d47-8e5b-46032740ea18', // The Web Channel ID
+    botButtonIcon: 'style/lofavor.png', // The icon displayed during the collapsed state of the chat widget to launch the expanded widget
+    logoIcon: 'style/lofavor.png', // The logo icon displayed in chat header
+    botIcon: 'style/lofavor.png', // The avatar icon that's displayed alongside response messages
+    i18n: { en: { chatTitle: 'LOfavør Chatbot' } }, // The title of the chat widget launch button, 'string'
+    initUserHiddenMessage: 'Hello', // Used to initiate the conversation automatically, without displaying the message in the chat widget, 'string'
+    disablePastActions: 'none', // Disables action buttons in a skill message once the user has interacted with it, 'all', 'postback', or 'none'
+    openLinksInNewWindow: true, // Open link in a new window, true or false
+    enableAttachment: false, // Enables the user to share files and location, true or false
+    showConnectionStatus: true, // Displays current connection status in chat header below title, true or false
+    enableClearMessage: true, // Displays a clear messages button in the chat widget header, true or false
+    hour12: false, // Use 12-hour time, true or false
   };    
  
   function initSdk(name) {
